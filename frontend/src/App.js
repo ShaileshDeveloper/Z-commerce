@@ -1,17 +1,14 @@
 import "./App.css";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Homescreen from "./screens/Homescreen";
+import Productscreen from "./screens/Productscreen";
 import "./bootstrap.min.css";
-import { Container } from "react-bootstrap";
+import { Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <main className="py-3">
-        <Container className ="text-center">Shailesh React-app</Container>
-      </main>
-      <Footer />
+      <Route path="/" component={Homescreen } exact/>
+      <Route path="/product/:id" component={Productscreen } />
     </div>
   );
 }
