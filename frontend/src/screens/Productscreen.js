@@ -9,11 +9,12 @@ function Productscreen({ match }) {
 
   useEffect(() => {
     const fetchproduct = async () => {
-      const {data} = await axios.get(`/product/${match.params.id}`);
+      const {data} = await axios.get(`http://localhost:5000/products/${match.params.id}`);
+      console.log(data)
       setProduct(data)
     };
     fetchproduct();
-  }, [match]);
+  }, []);
   return (
     <>
       <Link className="btn btn-light my-3" to="/">

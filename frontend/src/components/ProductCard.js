@@ -8,12 +8,12 @@ function ProductCard({ product }) {
   return (
     <div>
       <Card className="my-3 p-2 rounded">
-        <Link to={`/product/${product._id}`}>
+        <Link to={`/products/${product._id}`}>
           <Card.Img src={product.image} variant="top" />
        </Link>
 
         <Card.Body>
-          <a href={`/product/${product._id}`}>
+          <a href={`/products/${product._id}`}>
             <Card.Title as="div">
               <strong>{product.name}</strong>
             </Card.Title>

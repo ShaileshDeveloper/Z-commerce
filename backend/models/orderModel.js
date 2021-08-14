@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const orderSchema = new mongoose.Schema(
   {
     user: {
-      type: mongoose.Types.Schema.ObjectId,
+      type: mongoose.Schema.Types.ObjectId,
       required: true,
       ref: "User",
     },
@@ -14,7 +14,7 @@ const orderSchema = new mongoose.Schema(
         image: { type: String, required: true },
         price: { type: Number, required: true },
         product: {
-          type: mongoose.Types.Schema.ObjectId,
+          type: mongoose.Schema.Types.ObjectId,
           required: true,
           ref: "Product",
         },
@@ -72,5 +72,5 @@ const orderSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const orderModel = new mongoose.Model("Order", orderSchema);
+const orderModel = new mongoose.model("Order", orderSchema);
 module.exports = { orderModel, orderSchema };

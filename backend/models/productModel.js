@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const reviewSchema = new mongoose.Schema[{
+const reviewSchema = mongoose.Schema[{
     name:{
         type: String,
         required: true,
@@ -16,9 +16,9 @@ const reviewSchema = new mongoose.Schema[{
 },{timestamps:true}
 ]
 
-const productSchema = new mongoose.Schema({
+const productSchema =  mongoose.Schema({
     user:{
-       type:mongoose.Types.Schema.ObjectId,
+       type:mongoose.Schema.Types.ObjectId,
        ref:"User",
        required:true,
     },
@@ -42,7 +42,6 @@ const productSchema = new mongoose.Schema({
         type:String,
         required:true,
     },
-    reviews:[reviewSchema],
     rating:{
         type:Number,
         required:true,
@@ -63,5 +62,5 @@ const productSchema = new mongoose.Schema({
     }
 })
 
-const postModel = new mongoose.Model('Product' , productSchema)
-module.exports ={postModel , postSchema}
+const productModel = new mongoose.model('Product' , productSchema)
+module.exports ={productModel , productSchema}
