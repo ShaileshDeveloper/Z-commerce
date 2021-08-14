@@ -8,7 +8,7 @@ const productListReducer = (state = { products: [] }, action) => {
       return { loading: false, error: action.payload };
 
     default:
-      break;
+        return state
   }
 };
 
