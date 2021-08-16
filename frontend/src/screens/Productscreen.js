@@ -16,7 +16,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { productDetailsAction } from "../actions/productActions";
 
 function Productscreen({ history, match }) {
-  const [qty, setQty] = useState(0);
+  const [qty, setQty] = useState(1);
 
   const dispatch = useDispatch();
   const productDetails = useSelector((state) => state.productDetails);
